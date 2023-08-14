@@ -10,7 +10,7 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/scrolla.jquery.min.js"></script>
-    <script src="js/script_main.js"></script>
+      <script src="js/script_main.js"></script>
 </head>
 <body>
       <div class="wrap">
@@ -25,11 +25,11 @@
                <a href="#" class="close"><img src="images/close.png" alt="닫기">Close</a>
                 <div class="menuWrap_left">
                    <ul class="tit en_1">
-                       <li><a href="#" class="menuBtn"><span><b>HOME</b></span></a></li>
-                       <li><a href="#" class="menuBtn"><span><b>お部屋</b></span></a></li>
-                       <li><a href="#" class="menuBtn"><span><b>お料理</b></span></a></li>
-                       <li><a href="#" class="menuBtn"><span><b>その他</b></span></a></li>
-                       <li><a href="#" class="menuBtn"><span><b>コンタクト</b></span></a></li>
+                       <li><a href="#" class="menuBtn1"><span><b>HOME</b></span></a></li>
+                       <li><a href="#" class="menuBtn2"><span><b>お部屋</b></span></a></li>
+                       <li><a href="#" class="menuBtn3"><span><b>お料理</b></span></a></li>
+                       <li><a href="#" class="menuBtn4"><span><b>その他</b></span></a></li>
+                       <li><a href="#" class="menuBtn5"><span><b>コンタクト</b></span></a></li>
                    </ul>
                     <div class="follow en_1">
                       <p>FOLLOW US</p>
@@ -147,14 +147,14 @@
                       <span><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Check out</span>
                    </li>
                    <li>
-                      <a href="#"><p class="en">Welcome</p></a>
+                      <a href="#"><p class="en">Go to Book</p></a>
                    </li>
               </ul>
          </section>
          
          <!-- 방 소개 -->
          <div id="room_background">
-         <section class="introduce" id="area1">
+         <section class="introduce" id="area2">
                <div class="title animate" data-animate="motion">
                    <p>お部屋</p>  
                </div>
@@ -224,7 +224,7 @@
                			 </div>
             <ul class="slide2">
                 <li>
-                    <img src="images/dish1.jpg" alt="" class="bigpic">
+                    <img src="images/dish1.jpg" alt="" class="bigpic1">
                     <div class="slide_txt">
                         
                         <p></p>
@@ -232,7 +232,7 @@
                     </div>
                 </li>
                 <li>
-                    <img src="images/dish2.jpg" alt="" class="bigpic">
+                    <img src="images/dish2.jpg" alt="" class="bigpic2">
                     <div class="slide_txt">
                         <h3></h3>
                         <p></p>
@@ -240,21 +240,21 @@
                     </div>
                 </li>
                 <li>
-                    <img src="images/dish3.jpg" alt="" class="bigpic">
+                    <img src="images/dish3.jpg" alt="" class="bigpic3">
                     <div class="slide_txt">
                         <h3></h3>
                         <p></p>
                     </div>
                 </li>
                 <li>
-                    <img src="images/dish4.jpg" alt="" class="bigpic">
+                    <img src="images/dish4.jpg" alt="" class="bigpic4">
                     <div class="slide_txt">
                         <h3></h3>
                         <p></p>
                     </div>
                 </li>
                 <li>
-                    <img src="images/dish5.jpg" alt="" class="bigpic">
+                    <img src="images/dish5.jpg" alt="" class="bigpic5">
                     <div class="slide_txt">
                         <h3></h3>
                         <p></p>
@@ -267,15 +267,15 @@
             </div>
         </section>
         <div class="dishs">
-        	<img src="/images/dish1.jpg" class="smallpic">
+        	<img src="/images/dish1.jpg" onclick="changeImg1()">
         	
-        	<img src="/images/dish2.jpg" class="smallpic">
+        	<img src="/images/dish2.jpg" onclick="changeImg2()">
         	
-        	<img src="/images/dish3.jpg" class="smallpic">
+        	<img src="/images/dish3.jpg" onclick="changeImg3()">
         
-        	<img src="/images/dish4.jpg" class="smallpic">
+        	<img src="/images/dish4.jpg" onclick="changeImg4()">
         
-        	<img src="/images/dish5.jpg" class="smallpic">
+        	<img src="/images/dish5.jpg" onclick="changeImg5()">
         	
         </div>
         
@@ -335,7 +335,7 @@
        </section>
        
            <!--footer-->
-       <footer>
+       <footer id="area5">
            <div class="foot_inner">
                <h2 class="logo"> 旅館&nbsp; 
                             花びら</h2>
@@ -358,5 +358,56 @@
            </div>
        </footer>
       </div>
+    	<script>
+    	
+    		function changeImg1() {
+    			
+    			document.querySelector('.bigpic1').src = "/images/dish1.jpg";
+    			document.querySelector('.bigpic1').zindex = "10";
+    		}
+    		
+			function changeImg2() {
+    			
+    			document.querySelector('.bigpic2').src = "/images/dish2.jpg";
+    			document.querySelector('.bigpic2').zindex = "10";
+    		}
+			
+			function changeImg3() {
+    			
+    			document.querySelector('.bigpic3').src = "/images/dish3.jpg";
+    		}
+			
+			function changeImg4() {
+    			
+    			document.querySelector('.bigpic4').src = "/images/dish4.jpg";
+    		}
+			
+				function changeImg5() {
+    			
+    			document.querySelector('.bigpic5').src = "/images/dish5.jpg";
+    		}
+    	
+    		document.querySelector('.menuBtn1').addEventListener('click', e=>{
+    			
+    			document.querySelector('#area1').scrollIntoView({behavior:'smooth'});
+    		});
+			
+    		document.querySelector('.menuBtn2').addEventListener('click', e=>{
+    			
+    			document.querySelector('#area2').scrollIntoView({behavior:'smooth'});
+    		});
+			document.querySelector('.menuBtn3').addEventListener('click', e=>{
+    			
+    			document.querySelector('#area3').scrollIntoView({behavior:'smooth'});
+    		});
+			document.querySelector('.menuBtn4').addEventListener('click', e=>{
+	
+			document.querySelector('#area4').scrollIntoView({behavior:'smooth'});
+			});
+			document.querySelector('.menuBtn5').addEventListener('click', e=>{
+	
+			document.querySelector('#area5').scrollIntoView({behavior:'smooth'});
+			});
+    	</script>
 </body>
 </html>
